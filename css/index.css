@@ -1,0 +1,913 @@
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+.tipsBox {
+  width: 100%;
+  height: 40px;
+  background: #fff8ef;
+}
+
+.tips {
+  width: 1080px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+.loginBox {
+  width: 100%;
+  height: 30px;
+  background: #f4f4f4;
+  font-size: 12px;
+}
+
+.dlogin {
+  width: 1080px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+.login {
+  width: 505px;
+  height: 30px;
+  float: right;
+}
+
+.login li {
+  margin-left: 12px;
+  float: left;
+}
+
+.login li:nth-of-type(2) a {
+  color: black;
+}
+
+.login li:nth-of-type(2) a:hover {
+  text-decoration: underline;
+}
+
+.login li:nth-of-type(3) a {
+  color: #fd5482;
+}
+
+.login li:nth-of-type(5) a {
+  color: black;
+}
+
+.login li:nth-of-type(5) a:hover {
+  text-decoration: underline;
+}
+
+.login li:nth-of-type(7) {
+  position: relative;
+}
+
+#businessCenter {
+  border: 1px solid black;
+  position: absolute;
+  width: 104px;
+  background: white;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 3;
+}
+
+
+.login li:nth-of-type(7):hover #businessCenter {
+  display: block;
+}
+
+#helpCenter {
+  border: 1px solid black;
+  position: absolute;
+  width: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.login li:nth-of-type(9):hover #helpCenter {
+  display: block;
+}
+
+#concernTop {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 55px;
+  height: 20px;
+  z-index: 3;
+  background: white;
+  border: 1px solid black;
+  border-bottom: none;
+  text-align: center;
+  display: none;
+}
+
+#concernBottom {
+  position: absolute;
+  padding-top: 5px;
+  top: 24px;
+  left: -83px;
+  width: 220px;
+  height: 140px;
+  background: white;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 3;
+  display: none;
+}
+
+.login li:nth-of-type(11):hover #concernTop {
+  display: block;
+}
+
+.login li:nth-of-type(11):hover #concernBottom {
+  display: block;
+}
+
+/*购物车*/
+.box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contentBox {
+  width: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.promise {
+  line-height: 90px;
+  height: 90px;
+  display: inline-block;
+}
+
+.promise a {
+  line-height: 90px;
+  display: inline-block;
+}
+
+.promise img {
+  vertical-align: middle;
+}
+
+.img832 {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  position: absolute;
+  left: 935px;
+  top: 28px;
+  border-radius: 50%;
+}
+
+.shopingCar {
+  width: 125px;
+  height: 30px;
+  background: #ff647c;
+  border-radius: 5px;
+  float: right;
+  margin-top: 30px;
+  margin-left: 37px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+/* 购物车 */
+.shopingCarBox {
+  position: absolute;
+  display: none;
+  left: 740px;
+  top: 60px;
+  width: 340px;
+  height: 210px;
+  /* box-sizing: border-box; */
+  border: 1px solid #ff5482;
+  z-index: 3;
+  background: white;
+}
+
+.myGoods {
+  width: 340px;
+  height: 160px;
+  overflow: auto;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.pay {
+  width: 100%;
+  height: 47px;
+  line-height: 47px;
+}
+
+.pay span {
+  font-size: 14px;
+}
+
+.pay b {
+  color: #e53363;
+}
+
+.pay input[type="button"] {
+  width: 120px;
+  height: 35px;
+  color: white;
+  line-height: 35px;
+  outline: none;
+  border: 1px solid #ff4376;
+  background: #ff5482;
+  border-radius: 2px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 6px;
+}
+
+.shopingCar:hover .shopingCarBox {
+  display: block;
+}
+
+.shopingRight {
+  /*width: 515px;*/
+  float: right;
+}
+
+.boxNav {
+  /* overflow: hidden; */
+  background: #ff647c;
+}
+
+.uNav {
+  float: left;
+  display: flex;
+  width: 560px;
+  height: 40px;
+}
+
+.uNav li {
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+
+.uNav li:nth-of-type(1) {
+  background: #f34660;
+}
+
+.uNav li:hover {
+  background: #f34660;
+}
+
+.icoHot {
+  width: 27px;
+  height: 14px;
+  position: absolute;
+  left: 534px;
+  top: 1px;
+}
+
+.navRight {
+  width: 300px;
+  height: 40px;
+  float: right;
+}
+
+#classify {
+  width: 65px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 40px;
+  color: white;
+}
+
+.txtSearch {
+  width: 210px;
+  height: 25px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+/*商品分类*/
+#allgoods {
+  display: none;
+  width: 490px;
+  height: 525px;
+  position: absolute;
+  left: 730px;
+  top: 200px;
+  z-index: 3;
+}
+
+#goodsleft {
+  float: left;
+  height: 100%;
+  width: 115px;
+  /*display: flex;*/
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#goodsleft li {
+  text-align: center;
+  /*flex: 1;*/
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid black;
+  border-bottom: none;
+  box-sizing: border-box;
+  background: #f9f9f9;
+}
+
+#goodsright {
+  width: 375px;
+  height: 100%;
+  float: right;
+}
+
+#goodsright ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#goodsright span {
+  display: block;
+}
+
+.goodsImg {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.ulImg li {
+  padding-top: 10px;
+  text-align: center;
+  height: 100px;
+  width: 25%;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #737373;
+  border-right: 1px dashed #737373;
+}
+
+.ulImg li:nth-child(4n) {
+  border-right: none;
+}
+
+.goodsImg:first-child {
+  display: list-item;
+}
+
+/* //二级菜单 */
+.navTwoDiv {
+  height: 30px;
+  width: 1080px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navTwo {
+  display: flex;
+  height: 30px;
+  width: 540px;
+}
+
+.navTwo li {
+  height: 30px;
+  line-height: 30px;
+  flex: 1;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.navTwo li:hover {
+  border-bottom: 2px solid red;
+}
+
+.excellentContent {
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.excellentContent a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  line-height: 30px;
+  color: red;
+}
+
+.excellentContent a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.banner table {
+  margin-top: 2px;
+  position: absolute;
+  background: white;
+  right: 155px;
+  top: 0px;
+  width: 250px;
+  height: 315px;
+  border-color: gray;
+}
+
+.banner table td {
+  position: relative;
+}
+
+.bargainPrice {
+  position: absolute;
+  left: 85px;
+  top: 13px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #fe647b;
+  display: block;
+  color: white;
+  line-height: 35px;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* //固定菜单 */
+.fixedMenu {
+  width: 72px;
+  height: 178px;
+  display: flex;
+  position: fixed;
+  right: 40px;
+  top: 380px;
+  flex-wrap: wrap;
+}
+
+.fixedMenu li {
+  width: 100%;
+  height: 25%;
+  box-sizing: border-box;
+  background: #ffdade;
+  border-bottom: 1px solid #ecc7cb;
+}
+
+/* .fixedMenu li:first-child {
+  background: url()
+} */
+
+/* 今日特卖 */
+.sale {
+  float: left;
+  width: 815px;
+}
+
+.leaderBoard {
+  float: right;
+  width: 250px;
+}
+
+.sale p {
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sale span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: black;
+  vertical-align: middle;
+}
+
+.goods {
+  width: 255px;
+  height: 255px;
+  vertical-align: top;
+}
+
+/* //商品图标 */
+.saleTable {
+  width: 815px;
+}
+
+.cell {
+  width: 255px;
+}
+
+.cell p {
+  font-size: 12px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.cell h4 {
+  height: 40px;
+}
+
+.cell span {
+  border-radius: 0px;
+  display: inline;
+  background: transparent;
+}
+
+.price {
+  vertical-align: bottom;
+  font-size: 12px;
+}
+
+.price b:first-child {
+  color: #ff4965;
+  vertical-align: bottom;
+}
+
+.yuan {
+  font-size: 20px;
+  vertical-align: bottom;
+}
+
+.price del:nth-child(2) {
+  vertical-align: bottom;
+}
+
+.cell .discount {
+  margin-top: 10px;
+  width: 40px;
+  height: 14px;
+  vertical-align: bottom;
+  float: right;
+}
+
+.leaderBoard p:first-child {
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+}
+
+/* //排行版 */
+.orderBy {
+  width: 250px;
+  display: flex;
+}
+
+.orderBy li {
+  text-align: center;
+  width: 25%;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #dbdbdb;
+}
+
+.orderBy li:first-child {
+  background: white;
+  border-bottom: none;
+}
+
+.orderContent {
+  width: 100%;
+}
+
+.orderContent ul {
+  width: 100%;
+}
+
+/* //童装 */
+
+.ulChildrenWear li {
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  padding-top: 10px;
+  border-top: none;
+  padding-bottom: 10px;
+}
+
+.ulChildrenWear li div {
+  display: inline-block;
+  width: 144px;
+  font-size: 14px;
+}
+
+.ulChildrenWear .liChildrenWear div p,
+h4 {
+  width: 100%;
+}
+
+.ulChildrenWear .liChildrenWear .description {
+  height: 30px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.ulChildrenWear .liChildrenwwear div h4 {
+  margin-top: 10px;
+  color: red;
+}
+
+.currentPrice {
+  color: red;
+  font-size: 16px;
+  vertical-align: bottom;
+}
+
+.original {
+  font-size: 12px;
+  vertical-align: bottom;
+  color: black;
+}
+
+.ulChildrenWear {
+  display: none;
+}
+
+.more {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 60px;
+  background: white;
+}
+
+.footerBanner {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.otherProblems {
+  width: 100%;
+  height: 137px;
+  border-bottom: 1px solid #e9e1e8;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.novice li {
+  font-size: 12px;
+}
+
+.borderImg {
+  width: 2px;
+  height: 120px;
+  float: right;
+  background: url(img/1536.png);
+}
+
+
+/* 二维码 */
+.borderImg {
+  width: 180px;
+  height: 80px;
+}
+
+.borderImg img:first-child {
+  float: left;
+}
+
+#attention {
+  width: 86px;
+  float: right;
+  font-size: 12px;
+}
+
+#attention h4 {
+  font-size: 12px;
+  color: red;
+}
+
+#attention p {
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+
+/* 我们的优势 */
+.advantage {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 790px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.topThree {
+  width: 645px;
+  float: left;
+  display: flex;
+}
+
+.lastAdvantage {
+  width: 145px;
+  float: right;
+}
+
+.advantageList {
+  width: 100%;
+}
+
+.advantageList img {
+  width: 38px;
+  height: 38px;
+  float: left;
+}
+
+.authentic {
+  width: 175px;
+  height: 100%;
+}
+
+.authentic h2 {
+  font-size: 18px;
+}
+
+.authentic p {
+  font-size: 12px;
+}
+
+.lastAdvantageList {
+  width: 100%;
+}
+
+.lastauthentic {
+  width: 100px;
+  float: right;
+}
+
+.lastauthentic h2 {
+  font-size: 18px;
+}
+
+.lastauthentic p {
+  font-size: 12px;
+}
+
+/* 底部导航 */
+.bottomNav {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  /* height: 12px; */
+  margin-top: 25px;
+  border-top: 3px solid #ff5482;
+  background: #555555;
+}
+
+.bottomNavList {
+  height: 13px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomNavList li {
+  width: 7.5%;
+  border-right: 2px solid #d4b683;
+  color: #dddddd;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 网页底部 */
+.footer {
+  width: 100%;
+  padding-top: 13px;
+  text-align: center;
+}
+
+.footer p {
+  width: 100%;
+  height: 35px;
+  font-size: 12px;
+  line-height: 35px;
+}
+
+.footer h4 {
+  width: 100%;
+  height: 12px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/* 固定首部导航 */
+.navTwoList {
+  float: left;
+  font-size: 12px;
+  margin-left: 110px;
+  color: #a2a2a2;
+}
+
+.navTworigtht {
+  width: 230px;
+  height: 30px;
+  float: right;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.navTworigtht div:first-child {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 1px solid #a2a2a2;
+  font-size: 12px;
+  color: #7f4dbc;
+  height: 30px;
+  line-height: 30px;
+}
+
+.navTworigtht div:last-child {
+  float: right;
+  width: 50%;
+  font-size: 12px;
+  color: #ff647c;
+  height: 30px;
+  line-height: 30px;
+}
+
+.semicircleLogo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.boxOfnav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  background: white;
+}

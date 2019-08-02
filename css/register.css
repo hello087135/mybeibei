@@ -1,0 +1,57 @@
+.informationContent>h2 {
+    width: 324px;
+    height: 30px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.checkCode {
+    width: 230px;
+    height: 30px;
+    font-size: 12px;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+#getCode {
+    width: 85px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-top: 0px;
+    /* float: right; */
+}
+
+.loginBox2 {
+    height: 600px;
+}
+
+.information2 {
+    height: 600px;
+}
+
+.informationContent2 {
+    height: 600px;
+}
+
+#passHint {
+    margin-top: 15px;
+    width: 100%;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+#passHint1 {
+    margin-top: 15px;
+    width: 100%;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+#passHint1>a {
+    color: #ff4965
+}

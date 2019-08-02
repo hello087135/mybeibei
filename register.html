@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body style="background: white">
+    <div class="box logoBox0">
+        <div class="contentBox logoBox">
+            <img src="img/1933.jpg">
+            <img src="img/1945.png">
+        </div>
+    </div>
+    <div class="box login1">
+        <div class="contentBox loginContent">
+            <div class="loginBox1 loginBox2">
+                <div class="information information2">
+                    <div class="informationContent informationContent2">
+                        <p>
+                            <b>新用户注册</b>
+                            <span class="informationSpan1">已有账号?<span class="informationSpan2">
+                                    直接登录</span></span>
+                        </p>
+                        <input type="text" placeholder="您的手机号" class="informationInput1"><span class="error"></span>
+                        <input type="text" placeholder="" class="pass">
+                        <h2>
+                            <input type="text" placeholder="短信验证码" class="checkCode">
+                            <input type="button" id="getCode" value="获取校验码">
+                        </h2>
+                        <input type="text" placeholder="您的密码" class="pass">
+                        <span class="error"></span>
+                        <h4><span><input type="checkbox"><label for="">自动登录</label></span> <span
+                                class="forgetPass">忘记密码</span></h4>
+                        <input type="button" value="注册" id="btn">
+                        <p id="passHint">为保障账户安全，建议密码为6-16位字符，可包含数字、字母和特殊字符。</p>
+                        <p id="passHint1">注册即表示接受<a href="#">《贝贝使用协议》</a>和 <a href="#">《社区使用协议》</a></p>
+                        <div class="informationFooter">
+                            <span>快捷方式登录:</span>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div class="box bottomNav">
+        <div class="contentBox ">
+            <ul class="bottomNavList">
+                <li>首页</li>
+                <li>关于贝贝</li>
+                <li>商家入驻</li>
+                <li>正品保证</li>
+                <li>人才招聘</li>
+                <li>联系我们</li>
+                <li>帮助中心</li>
+                <li>友情链接</li>
+                <li>手机客户端</li>
+                <li>客服在线</li>
+                <li>贝贝公益</li>
+                <li>品质健康</li>
+                <li style="border-right:none ">育儿社区</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 网页底部 -->
+    <div class="box">
+        <div class="contentBox footer">
+            <p>浙ICP备14025287号 | 食品流通许可证：SP3301041510054925 | 出版物经营许可证：新出发零字第00086号 | 知识产权 | 浙公网安备 33010402000616号</p>
+            <h4>© 2014-2019 杭州贝购科技有限公司 All Rights Reserved. 客服热线：0571-10107788</h4>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+<script>
+    //表单的验证  
+
+    //前段的验证
+    let username = $(".informationInput1")[0];
+    let userPass = $(".pass")[1]
+    $(".informationInput1").eq(0).blur(function () {
+        let valueOfName = $(".informationInput1").eq(0).val();
+        console.log(valueOfName);
+        if (checkPhone(valueOfName) || checkEmail(valueOfName)) {
+            if (true) {
+                $(".error").eq(0).html("")
+                $.get("./register.php", {
+                    "username1": $(".informationInput1").eq(0).val()
+                }, checkAfter, "text")
+            }
+        } else {
+            $(".error").eq(0).html("亲，请你输入正确的手机号或邮箱")
+        }
+    })
+    $(".pass").eq(1).blur(function () {
+        let passValue = $(this).val();
+        if (checkPass(passValue)) {
+            $(".error").eq(1).html("")
+        } else {
+            $(".error").eq(1).html("密码格式不正确")
+        }
+    })
+
+    //后端的验证
+    $("#btn").click(function () {
+        //1.前段验证
+        checkAll(username, userPass)
+    })
+
+    function checkAll(username, userPass) {
+        let valueOfName = $(".informationInput1").eq(0).val();
+        if (checkPass($('.pass').eq(1).val())) {
+            if (checkPhone(valueOfName) || checkEmail(valueOfName)) {
+                $.get("./register.php", {
+                    "username1": $(".informationInput1").eq(0).val()
+                }, checkAfterSuccess, "text")
+            }
+        }
+    }
+</script>

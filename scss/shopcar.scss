@@ -1,0 +1,137 @@
+.myShopCar {
+    width: 100%;
+}
+
+.contentBox1 {
+    width: 1200px;
+}
+
+.myShopCar>h1 {
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    color: #a7a7a7;
+    padding-left: 30px;
+    box-sizing: border-box;
+    line-height: 70px;
+    /* background-color: #fafafa;
+    background-image: url(img/1140.png); */
+    background: url(../img/1140.png) no-repeat 740px -80px;
+    background-color: #fafafa
+}
+
+.goodsTitle {
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #dddddd;
+    background: #f3f3f3;
+    font-weight: 600;
+    display: flex;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.allCheck {
+    padding-left: 12px;
+    box-sizing: border-box;
+    width: 95px;
+    line-height: 30px;
+}
+
+.allCheck>input {
+    vertical-align: middle
+}
+
+.allCheck>span {
+    vertical-align: middle
+}
+
+@mixin name1 {
+    height: 100%;
+    line-height: 30px;
+}
+
+.goodsName {
+    width: 300px;
+    @include name1;
+}
+
+.goodsInformation {
+    width: 165px;
+    @include name1;
+}
+
+.goodsPrice {
+    width: 170px;
+    @include name1;
+}
+
+.goodsCount {
+    width: 295px;
+    @include name1;
+}
+
+.subTotal {
+    width: 65px;
+    @include name1
+}
+
+.operate {
+    @include name1
+}
+
+.cars {
+    width: 100%;
+
+    td {
+        border: none;
+    }
+}
+
+.carsTitle {
+    font-size: 12px;
+    background: #f3f3f3;
+    height: 40px;
+    line-height: 40px;
+}
+
+.carsCheckBox {
+    height: 105px;
+    line-height: 105px;
+    text-align: right;
+
+    input {
+        margin-right: 25px;
+    }
+}
+
+.carsName {
+    height: 105px;
+    line-height: 105px;
+
+    .carsNameLeft {
+        width: 80px;
+        height: 100%;
+        float: left;
+
+        img {
+            margin-top: 12px;
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .carsNameRight {
+        float: left;
+        width: 180px;
+        height: 100%;
+        margin-left: 10px;
+
+        p {
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 20px;
+
+        }
+    }
+}

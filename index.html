@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>贝贝网</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+	<!--提示栏-->
+	<div class="tipsBox">
+		<div class="tips">
+			任何情况下，贝贝不会以任何理由主动联系用户索要密码、验证码或银行卡号，或是要求点击任何网址链接扫描二维码进行退款或支付操作。请提高警惕，谨防受骗！
+		</div>
+	</div>
+	<!--登入提示-->
+	<div class="loginBox">
+		<div class="dlogin">
+			<ul class="login">
+				<li>您好，</li>
+				<li>
+					<a href="#" class="aLogin">请登入</a>
+				</li>
+				<li>
+					<a href="#">免费注册</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="#">商家入驻</a>
+				</li>
+				<li>|</li>
+				<li>贝贝商家中心<span class="iconfont icon-xiala-"></span>
+					<ul id="businessCenter">
+						<li>贝贝商家中心<span class="iconfont icon-xiala-"></span></li>
+						<li>贝店商家中心</li>
+						<li>友团商家中心</li>
+						<li>贝仓商家中心</li>
+						<li>供应商中心</li>
+					</ul>
+				</li>
+				<li>|</li>
+				<li style="position: relative;">帮助中心<span class="iconfont icon-xiala-"></span>
+					<ul id="helpCenter" style="position: absolute">
+						<li>帮助中心</li>
+						<li>联系客服</li>
+					</ul>
+				</li>
+				<li>|</li>
+				<li style="position: relative;">关注<span class="iconfont icon-xiala-"></span>
+					<div id="concernTop">
+						关注<span class="iconfont icon-xiala-"></span>
+					</div>
+					<div id="concernBottom">
+						<img src="img/1.png" />
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--购物车-->
+	<div class="box" style="overflow: visible;">
+		<div class="contentBox" style="position: relative;overflow: visible;">
+			<div class="shopingRight">
+				<div class="promise">
+					<a href="#"><img src="img/2220.png" /></a>
+				</div>
+				<img src="img/832.png" class="img832" />
+				<div class="shopingCar">
+					我的购物车
+					<div class="shopingCarBox">
+						<div class="myGoods">
+
+						</div>
+						<div class="pay">
+							<span>小计</span>
+							<b>￥0.00</b>
+							<input type="button" value="去购物车结算">
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="logo">
+				<img src="img/2202.jpg" />
+			</a>
+		</div>
+	</div>
+
+
+	<!--导航-->
+	<div class="box boxNav">
+		<div class="contentBox" style="position: relative;">
+			<ul class="uNav">
+				<li><b>首页</b></li>
+				<li><b>贝贝app</b></li>
+				<li><b>贝店</b></li>
+				<li><b>北仓</b></li>
+				<li><b>贝贷</b></li>
+				<li><b>商家入驻</b></li>
+			</ul>
+			<img src="img/hot.png" class="icoHot" />
+			<div class="navRight">
+				<div id="classify" style="position: relative;">
+					在售分类
+
+				</div>
+				<input type="text" class="txtSearch" placeholder="搜索商标或品牌" />
+			</div>
+
+		</div>
+	</div>
+	<!--//商品分类-->
+	<div class="box1"></div>
+	<div id="allgoods">
+		<ul id="goodsleft">
+			<li>热销分类</li>
+			<li>儿童服饰</li>
+			<li>婴儿装</li>
+			<li>婴童鞋</li>
+			<li>奶粉辅食</li>
+			<li>纸尿裤</li>
+			<li>哺育喂养</li>
+			<li>洗护清洁</li>
+			<li>睡眠出行</li>
+			<li>玩具文体</li>
+			<li>孕妈专区</li>
+			<li>流行服饰</li>
+			<li>鞋包配饰</li>
+			<li>居家百货</li>
+			<li>美妆个护</li>
+		</ul>
+		<ul id="goodsright">
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/946.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/950.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/951.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1027.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/1029.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+			<li class="goodsImg">
+				<ul class="ulImg">
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+					<li>
+						<img src="img/2140.jpg" />
+						<span>纸尿裤</span>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<!--二级nav-->
+	<div class="box">
+		<div class="contentBox navTwoDiv">
+			<ul class="navTwo">
+				<li>童装</li>
+				<li>母婴</li>
+				<li>居家</li>
+				<li>美食</li>
+				<li>女装</li>
+				<li>鞋包</li>
+				<li>美妆</li>
+				<li>奶粉</li>
+				<li>纸尿裤</li>
+			</ul>
+			<div class="excellentContent">
+				<a href="#">精彩预告</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- //banner图 -->
+	<div class="banner">
+		<img src="img/1851.png" classs="bannrImg">
+		<table rules="all">
+			<tr>
+				<td>
+					<span class="bargainPrice">￥29.9</span>
+					<img src="img/1911'.jpg" alt="">
+					<p>限件600件</p>
+				</td>
+				<td>
+					<span class="bargainPrice">￥29.9</span>
+					<img src="http://b1.hucdn.com/upload/item/1807/15/37238897585171_800x800.jpg!100x100.jpg" alt="">
+					<p>限件600件</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="bargainPrice">￥309</span>
+					<img src="http://b1.hucdn.com/upload/item/1904/02/93440514689469_800x800.jpg!100x100.jpg" alt="">
+					<p>限件600件</p>
+				</td>
+
+				<td>
+					<span class="bargainPrice">￥168</span>
+					<img src="http://b1.hucdn.com/upload/item/1904/18/54461219340000_800x800.jpg!100x100.jpg" alt="">
+					<p>限件600件</p>
+				</td>
+			</tr>
+		</table>
+
+
+	</div>
+
+	<!-- //固定菜单 -->
+	<ul class="fixedMenu">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+	<!-- //今日特卖 -->
+	<div class="box">
+		<div class="contentBox salebox">
+			<div class="sale">
+				<p><b>今日特卖</b><span></span>每天9点准时上新</p>
+				<div class="container saleTable">
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1907/17/28987344810000_800x800.jpg"
+									class="goods">
+								<p>买7斤送2斤甘肃板栗</p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1906/28/09774923450000_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1803/05/16770652612426_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1807/17/20437958879682_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1907/02/42762158650000_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1904/02/95928040225171_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										id="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1907/08/72125580470000_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1712/18/89842013974244_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1904/02/76726117834125_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- //排行榜 -->
+			<div class="leaderBoard">
+				<p>热卖排行榜</p>
+				<ul class="orderBy">
+					<li>童装</li>
+					<li>童鞋</li>
+					<li>玩具</li>
+					<li>用品</li>
+				</ul>
+				<div class="orderContent">
+					<ul class="ulChildrenWear" style="display: block">
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1703/06/77281147337314_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1702/27/63505892007314_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1707/20/32034239906350_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1809/10/72469392976350_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+
+					</ul>
+					<ul class="ulChildrenWear">
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1809/07/96503020230436_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1805/18/31205910135476_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1904/13/41014905260000_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1903/19/80132046958925_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+
+					</ul>
+					<ul class="ulChildrenWear">
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1901/31/14427566381456_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1904/17/69027649500000_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1812/29/48745382529633_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1904/10/92770736280000_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+
+					</ul>
+					<ul class="ulChildrenWear">
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1907/09/39151424530000_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1906/12/16308373360000_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1711/12/65287420536302_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+						<li class="liChildrenWear">
+							<img src="http://b1.hucdn.com/upload/item/1905/07/22626978070000_800x800.jpg!100x100.jpg">
+							<div>
+								<p class="description">贝壳元素宝宝卡通字母T春装新款童装男童装长袖</p>
+								<h4><b class="currentPrice">￥36.00</b><del class="original">￥105</del></h4>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //点击加载更多 -->
+	<div class="box">
+		<div class="contentBox">
+			<div class="more">
+				点击展开更多精彩
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<img src="https://b0.hucdn.com/party/2016/5/upload_8c117b025f439e5a9b60d325d7980b20_1920x148.png" alt=""
+			class="footerBanner">
+	</div>
+	<!-- //其他问题 -->
+	<div class="box">
+		<div class="contentBox">
+			<div class="otherProblems" style="position: relative">
+				<ul class="novice">
+					<li><strong>新手指南</strong></li>
+					<li>注册登录</li>
+					<li>抢购商品</li>
+					<li>购物车操作</li>
+					<li>下单支付</li>
+				</ul>
+				<ul class="novice">
+					<li><strong>新手指南</strong></li>
+					<li>注册登录</li>
+					<li>抢购商品</li>
+					<li>购物车操作</li>
+					<li>下单支付</li>
+				</ul>
+				<ul class="novice">
+					<li><strong>新手指南</strong></li>
+					<li>注册登录</li>
+					<li>抢购商品</li>
+					<li>购物车操作</li>
+					<li>下单支付</li>
+				</ul>
+				<ul class="novice">
+					<li><strong>新手指南</strong></li>
+					<li>注册登录</li>
+					<li>抢购商品</li>
+					<li>购物车操作</li>
+					<li>下单支付</li>
+				</ul>
+				<ul class="novice">
+					<li><strong>新手指南</strong></li>
+					<li>注册登录</li>
+					<li>抢购商品</li>
+					<li>购物车操作</li>
+					<li>下单支付</li>
+				</ul>
+				<ul class="novice">
+					<li><strong>新手指南</strong></li>
+					<li>注册登录</li>
+					<li>抢购商品</li>
+					<li>购物车操作</li>
+					<li>下单支付</li>
+				</ul>
+				<div class="borderImg">
+					<img src="img/831.png">
+					<div id="attention">
+						<h4>关注社区</h4>
+						<p>优惠特卖早知道</p>
+						<img src="img/837.png">
+						<img src="img/873.png">
+					</div>
+				</div>
+			</div>
+			<div class=""></div>
+		</div>
+	</div>
+
+	<!-- 我们的有优势 -->
+	<div class="box">
+		<div class="contentBox">
+			<div class="advantage">
+				<div class="topThree">
+					<div class="advantageList">
+						<img src="img/947.png" alt="">
+						<div class="authentic">
+							<h2>正品保证</h2>
+							<p>商品均有中国人寿承保</p>
+						</div>
+					</div>
+					<div class="advantageList">
+						<img src="img/947.png" alt="">
+						<div class="authentic">
+							<h2>正品保证</h2>
+							<p>商品均有中国人寿承保</p>
+						</div>
+					</div>
+					<div class="advantageList">
+						<img src="img/947.png" alt="">
+						<div class="authentic">
+							<h2>正品保证</h2>
+							<p>商品均有中国人寿承保</p>
+						</div>
+					</div>
+				</div>
+				<div class="lastAdvantage">
+					<div class="lastAdvantageList">
+						<img src="img/947.png">
+						<div class="lastauthentic">
+							<h2>正品保证</h2>
+							<p>汇集千家优质品牌</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部导航 -->
+	<div class="box bottomNav">
+		<div class="contentBox ">
+			<ul class="bottomNavList">
+				<li>首页</li>
+				<li>关于贝贝</li>
+				<li>商家入驻</li>
+				<li>正品保证</li>
+				<li>人才招聘</li>
+				<li>联系我们</li>
+				<li>帮助中心</li>
+				<li>友情链接</li>
+				<li>手机客户端</li>
+				<li>客服在线</li>
+				<li>贝贝公益</li>
+				<li>品质健康</li>
+				<li style="border-right:none ">育儿社区</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 网页底部 -->
+	<div class="box">
+		<div class="contentBox footer">
+			<p>浙ICP备14025287号 | 食品流通许可证：SP3301041510054925 | 出版物经营许可证：新出发零字第00086号 | 知识产权 | 浙公网安备 33010402000616号</p>
+			<h4>© 2014-2019 杭州贝购科技有限公司 All Rights Reserved. 客服热线：0571-10107788</h4>
+		</div>
+	</div>
+
+	<!-- 固定导航 -->
+	<div class="box boxOfnav" style="overflow: visible;">
+		<div class="contentBox" style="position: relative; overflow: visible;">
+			<ul class="navTwo navTwoList">
+				<li>童装</li>
+				<li>母婴</li>
+				<li>居家</li>
+				<li>美食</li>
+				<li>女装</li>
+				<li>鞋包</li>
+				<li>美妆</li>
+				<li>奶粉</li>
+				<li>纸尿裤</li>
+			</ul>
+			<div class="navTworigtht">
+				<div>全球购</div>
+				<div>限量购</div>
+			</div>
+			<img src="img/1759.png" class="semicircleLogo">
+		</div>
+	</div>
+</body>
+
+</html>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script> -->
+<script type="text/javascript">
+	let goodsleft = document.getElementById("goodsleft").children;
+	let goodsright = document.getElementById("goodsright").children;
+	for (let i = 0; i < goodsleft.length; i++) {
+		goodsleft[i].setAttribute("index", i);
+		goodsleft[i].onmouseover = function () {
+			for (let j = 0; j < goodsleft.length; j++) {
+				goodsleft[j].style.cssText = `
+				text-align: center;
+				height: 35px;
+				line-height: 35px;
+				border: 1px solid black;
+				border-bottom:none ;
+				box-sizing: border-box;
+				`
+			}
+			this.style.background = "white"
+			this.style.color = "red"
+			this.style.borderRight = "none"
+			var index = this.getAttribute("index");
+			for (let k = 0; k < goodsleft.length; k++) {
+				goodsright[k].style.display = "none"
+			}
+			goodsright[index].style.display = "list-item"
+		}
+	}
+	//	鼠标滑过在售分类
+	let classify = document.getElementById("classify");
+	let allgoods = document.getElementById("allgoods");
+	classify.onmouseover = function () {
+		allgoods.style.display = "block";
+	}
+	classify.onmouseout = function () {
+		allgoods.style.display = "none";
+	}
+	allgoods.onmouseover = function () {
+		allgoods.style.display = "block";
+	}
+	allgoods.onmouseout = function () {
+		allgoods.style.display = "none";
+	}
+
+	//鼠标滑过排行榜
+	let orderBy = document.getElementsByClassName("orderBy")[0].children;
+	let ulChildrenWear = document.getElementsByClassName("ulChildrenWear");
+	for (let i = 0; i < orderBy.length; i++) {
+		orderBy[i].setAttribute("index", i);
+		orderBy[i].onmouseover = function () {
+			for (let j = 0; j < ulChildrenWear.length; j++) {
+				ulChildrenWear[j].style.display = "none";
+				orderBy[j].style.cssText = `text-align: center;
+  					width: 25%;
+  					box-sizing: border-box;
+ 					background: #f9f9f9;
+  					height: 30px;
+  					line-height: 30px;
+  					border: 1px solid #dbdbdb;`
+			}
+			let index = this.getAttribute("index");
+			ulChildrenWear[i].style.display = "block";
+			this.style.background = "white";
+			this.style.borderBottom = "none";
+		}
+	}
+
+	//固定的导航
+	let boxOfnav = document.getElementsByClassName("boxOfnav")[0];
+	window.onscroll = function () {
+		let scl = document.body.scrollTop || document.ducomentElement.scrollTop;
+		if (scl >= 160) {
+			boxOfnav.style.display = "block";
+			boxOfnav.style.top = scl + "px";
+		} else {
+			boxOfnav.style.display = "none";
+		}
+	}
+</script>
