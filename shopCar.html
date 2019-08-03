@@ -126,6 +126,125 @@
             </div>
         </div>
     </div>
+    <!-- 具体商品 -->
+    <div class="box box1">
+        <div class="contentBox contentBox1">
+            <table class="cars" rules="rows">
+                <tr>
+                    <td class="carsTitle" colspan="7">
+                        <input type="checkbox">
+                        <span>其他</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="carsCheckBox">
+                        <input type="checkbox">
+                    </td>
+                    <td class="carsName">
+                        <div class="carsNameLeft">
+                            <img src="http://b1.hucdn.com/upload/item/1906/24/33223140370000_800x800.jpg!60x60.jpg"
+                                alt="">
+                        </div>
+                        <div class="carsNameRight">
+                            <p>格格童鞋儿童帆布鞋
+                                童鞋儿童帆布鞋格格童鞋儿
+                            </p>
+                        </div>
+                    </td>
+                    <td class="carsInformation">
+                        黑色，22码
+                    </td>
+                    <td class="carsPrice">
+                        29.90
+                    </td>
+                    <td class="carsCount">
+                        <div>
+                            <b class="carsCountAdd"></b>
+                            <span>1</span>
+                            <b class="carsCountSub"></b>
+                        </div>
+                    </td>
+                    <td class="carsSubTotal">
+                        29.90
+                    </td>
+                    <td class="carsOpera">
+                        <span>删除</span>
+                    </td>
+                </tr>
+                <tr class="carsFooter">
+                    <td colspan="5"></td>
+                    <td>小计</td>
+                    <td>29.90</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>
+<script src="js/jquery-1.8.3.js"></script>
+<script>
+    window.onload = function () {
+        $.get('shoppingCar.php', {}, test, 'text')
+
+        function test(data) {
+            console.log(data)
+            data = JSON.parse(data)
+            console.log(data[0].username)
+            for (let i = 0; i < data.length; i++) {
+                let str = `
+                <table class="cars" rules="rows">
+                <tr>
+                    <td class="carsTitle" colspan="7">
+                        <input type="checkbox">
+                        <span>其他</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="carsCheckBox">
+                        <input type="checkbox">
+                    </td>
+                    <td class="carsName">
+                        <div class="carsNameLeft">
+                            <img src="${data[i].img}"
+                                alt="">
+                        </div>
+                        <div class="carsNameRight">
+                            <p>
+                                ${data[i].imgd}
+                            </p>
+                        </div>
+                    </td>
+                    <td class="carsInformation">
+                        ${data[i].information}
+                    </td>
+                    <td class="carsPrice">
+                        ${data[i].price}
+                    </td>
+                    <td class="carsCount">
+                        <div>
+                            <b class="carsCountAdd"></b>
+                            <span>${data[i].count}</span>
+                            <b class="carsCountSub"></b>
+                        </div>
+                    </td>
+                    <td class="carsSubTotal">
+                        ${data[i].price*data[i].count}
+                    </td>
+                    <td class="carsOpera">
+                        <span>删除</span>
+                    </td>
+                </tr>
+                <tr class="carsFooter">
+                    <td colspan="5"></td>
+                    <td>小计</td>
+                    <td>29.90</td>
+                </tr>
+            </table>
+                `
+                $(".contentBox1").eq(0).append(str)
+            }
+        }
+
+    }
+</script>
