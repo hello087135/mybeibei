@@ -101,7 +101,7 @@
                 <h1>我的购物车</h1>
                 <div class="goodsTitle">
                     <div class="allCheck">
-                        <input type="checkbox">
+                        <input type="checkbox" class="checkboxLeader" checked="checked">
                         <span>全选</span>
                     </div>
                     <div class="goodsName">
@@ -138,7 +138,7 @@
                 </tr>
                 <tr>
                     <td class="carsCheckBox">
-                        <input type="checkbox">
+                        <input type="checkbox" class="checkboxUnder" checked="checked">
                     </td>
                     <td class="carsName">
                         <div class="carsNameLeft">
@@ -179,6 +179,60 @@
             </table>
         </div>
     </div>
+    <!-- 结账 -->
+    <div class="box" style="position: absolute ;left: 0;">
+        <div class="contentBox contentBox1">
+            <div class="checkOut">
+                <div class="checkOutLeft">
+                    <input type="checkbox" class="checkAll checkboxLeader" checked="checked">
+                    <span>全选</span>
+                    <span>删除</span>
+                </div>
+                <div class="checkOutRight">
+                    <p>
+                        共计<span class="goodsAllCount">5</span>件商品
+                        已优惠<span>0.00</span>元，总计（不含运费）<span class="totalPrice">
+                            ￥ 0.00
+                        </span>
+                        <input type="button" value="确认订单">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 占位的box-->
+    <div class="box">
+        <div class="placeHolderBox"></div>
+    </div>
+    <!-- 网页底部 -->
+    <div class="box bottomNav">
+        <div class="contentBox ">
+            <ul class="bottomNavList">
+                <li>首页</li>
+                <li>关于贝贝</li>
+                <li>商家入驻</li>
+                <li>正品保证</li>
+                <li>人才招聘</li>
+                <li>联系我们</li>
+                <li>帮助中心</li>
+                <li>友情链接</li>
+                <li>手机客户端</li>
+                <li>客服在线</li>
+                <li>贝贝公益</li>
+                <li>品质健康</li>
+                <li style="border-right:none ">育儿社区</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 网页底部 -->
+    <div class="box">
+        <div class="contentBox footer">
+            <p>浙ICP备14025287号 | 食品流通许可证：SP3301041510054925 | 出版物经营许可证：新出发零字第00086号 | 知识产权 | 浙公网安备 33010402000616号</p>
+            <h4>© 2014-2019 杭州贝购科技有限公司 All Rights Reserved. 客服热线：0571-10107788</h4>
+        </div>
+    </div>
+
 </body>
 
 </html>
@@ -188,9 +242,7 @@
         $.get('shoppingCar.php', {}, test, 'text')
 
         function test(data) {
-            console.log(data)
             data = JSON.parse(data)
-            console.log(data[0].username)
             for (let i = 0; i < data.length; i++) {
                 let str = `
                 <table class="cars" rules="rows">
@@ -202,7 +254,7 @@
                 </tr>
                 <tr>
                     <td class="carsCheckBox">
-                        <input type="checkbox">
+                        <input type="checkbox" class="checkboxUnder" checked="checked">
                     </td>
                     <td class="carsName">
                         <div class="carsNameLeft">
@@ -244,6 +296,49 @@
                 `
                 $(".contentBox1").eq(0).append(str)
             }
+            //调整结账时的位置
+            pCheckOut()
+            checkChange(data)
+        }
+
+        //调整结账时的位置
+        function pCheckOut() {
+            let windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            let top1 = windowHeight - $('.box').eq(3).height();
+            $('.box').eq(3).css('top', top1)
+            window.onscroll = function () {
+                let top2 = document.documentElement.scrollTop || document.body.scrollTop;
+                top3 = top1 + top2;
+                finalTop = $('.tipsBox').height() + $('.loginBox').height() + $('.box').eq(0).height() + $(
+                    '.box').eq(1).height() + $('.box').eq(2).height()
+                if (top3 >= finalTop + 50) {
+                    top3 = finalTop + 50;
+                }
+                $('.box').eq(3).css('top', top3)
+            }
+        }
+        //全选时自动全选
+        function checkChange() {
+            $('.checkboxUnder').click(function () {
+                for (let i = 0; i < $('.checkboxUnder').length; i++) {
+                    if (!$('.checkboxUnder')[i].checked) {
+                        $('.checkboxLeader').eq(0).attr('checked', false);
+                        $('.checkboxLeader').eq(1).attr('checked', false);
+                        return;
+                    } else {
+                        $('.checkboxLeader').eq(0).attr('checked', true);
+                        $('.checkboxLeader').eq(1).attr('checked', true);
+                    }
+                }
+            })
+
+            $('.checkboxLeader').click(function () {
+                for (let i = 0; i < $('.checkboxUnder').length; i++) {
+                    $('.checkboxUnder').eq(i).attr('checked', true);
+                    $('.checkboxLeader').eq(0).attr('checked', true);
+                    $('.checkboxLeader').eq(1).attr('checked', true);
+                }
+            })
         }
 
     }
