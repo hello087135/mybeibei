@@ -168,7 +168,7 @@
                         29.90
                     </td>
                     <td class="carsOpera">
-                        <span>删除</span>
+                        <span class="removeGoods">删除</span>
                     </td>
                 </tr>
                 <tr class="carsFooter">
@@ -284,7 +284,7 @@
                         ${data[i].price*data[i].count}
                     </td>
                     <td class="carsOpera">
-                        <span>删除</span>
+                        <span class=removeGoods>删除</span>
                     </td>
                 </tr>
                 <tr class="carsFooter">
@@ -299,12 +299,16 @@
             //调整结账时的位置
             pCheckOut()
             checkChange(data)
+            bindSubAdd()
+            bindCheckbox()
+            bindRemove()
+
         }
 
         //调整结账时的位置
         function pCheckOut() {
             let windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
-            let top1 = windowHeight - $('.box').eq(3).height();
+            let top1 = 662 - $('.box').eq(3).height();
             $('.box').eq(3).css('top', top1)
             window.onscroll = function () {
                 let top2 = document.documentElement.scrollTop || document.body.scrollTop;
@@ -341,5 +345,75 @@
             })
         }
 
+        //计算全部的小计
+        function subTotal(num, price) {
+            return num * price;
+        }
+
+        // 为加减绑定事件
+        function bindSubAdd() {
+            $('.cars').on('click', '.carsCountAdd', function () {
+                $num = parseInt($(this).next().html())
+                $num--;
+                if ($num <= 1) {
+                    $num = 1
+                }
+                $(this).next().html($num);
+                //获取单价
+                let $price = parseInt($(this).parent().parent().prev().html());
+                let $subTotal = subTotal($num, $price);
+                $(this).parent().parent().next().html($subTotal)
+
+                //计算总价
+                total()
+            })
+            $('.cars').on('click', '.carsCountSub', function () {
+                $num = parseInt($(this).prev().html())
+                console.log($num)
+                $num++;
+                $(this).prev().html($num);
+                //获取单价
+                let $price = parseInt($(this).parent().parent().prev().html());
+                let $subTotal = subTotal($num, $price);
+                $(this).parent().parent().next().html($subTotal)
+                //计算总价
+                total()
+            })
+        }
+
+        //计算总计
+        function total() {
+            let sum = 0;
+            let numbers = 0;
+            let $carsSubTotal = $('.carsSubTotal')
+            for (let i = 0; i < $carsSubTotal.length; i++) {
+                // console.log(($carsSubTotal.eq(i).parent())[0].firstElementChild.firstElementChild.checked)
+                if (($carsSubTotal.eq(i).parent())[0].firstElementChild.firstElementChild.checked) {
+                    numbers++
+                    sum += parseInt($carsSubTotal.eq(i).html())
+                }
+            }
+            $('.goodsAllCount').html(numbers)
+            $('.totalPrice').html('￥' + sum)
+        }
+
+
+        //为每个单选框绑定事件
+
+
+        function bindCheckbox() {
+            $('.cars').on('click', '.checkboxUnder', function () {
+                total();
+            })
+        }
+
+        //删除某个商品
+        function bindRemove() {
+            $('.cars').on('click', '.removeGoods', function (event) {
+                let evt = event;
+                $(evt.target).parent().parent().parent().parent().remove();
+                total();
+            })
+        }
     }
 </script>
