@@ -9,7 +9,8 @@ function appendData(data) {
         $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" >
             <p> </p> <h4 class = "price"> <b> <span class = "yuan"> ￥${parseInt(parseInt(data[i].price)*(data[i].discont/10))} </span>.90</b><del> ￥${data[i].price} </del><span
     class = "discount"> ${data[i].discont} 折 </span> </h4></div>  `
-        $('.childrenGoodsList').eq(0).append($str)
+        $('.childrenGoodsList1').eq(0).append($str)
+        $('.childrenGoodsList1').eq(0).css('display', 'flex')
     }
     let pageNum = Math.ceil(data.length / 4)
     let box = document.getElementsByClassName('childrenPage')[0];
@@ -39,7 +40,6 @@ class Page {
                 pageDom.className = 'childrenGoodsList1';
                 this.box1.appendChild(pageDom)
             }
-
         }
         let divDom1 = document.createElement('div')
         divDom1.className = 'nextPage';
@@ -50,19 +50,50 @@ class Page {
 }
 //为每个圈圈绑定事件
 function bindPage(doms, pages, data) {
+    // let has = true;
+    let has = []
+    for (let i = 0; i < doms.length; i++) {
+        has[i] = true;
+    }
     $(doms).click(function () {
-        let index = parseInt($(this).html) - 1;
-        for (let i = index * 4; i < index * 4 + 3; i++) {
-            if (data[i].img == null) {
-                break;
+        let index = parseInt($(this).html()) - 1;
+        if (has[index]) {
+            for (let i = index * 4; i < index * 4 + 4; i++) {
+                if (!data[i]) {
+                    break;
+                }
+                $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" >
+                <p> </p> <h4 class = "price"> <b> <span class = "yuan"> ￥${parseInt(parseInt(data[i].price)*(data[i].discont/10))} </span>.90</b><del> ￥${data[i].price} </del><span
+        class = "discount"> ${data[i].discont} 折 </span> </h4></div>  `
+                if (index >= 1) {
+                    $(pages[index - 1]).append($str)
+                }
             }
-            $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" >
-            <p> </p> <h4 class = "price"> <b> <span class = "yuan"> ￥${parseInt(parseInt(data[i].price)*(data[i].discont/10))} </span>.90</b><del> ￥${data[i].price} </del><span
-    class = "discount"> ${data[i].discont} 折 </span> </h4></div>  `
-            $(pages[index]).append($str)
+            $('.pages').css({
+                'color': '#77778c',
+                'background': 'white'
+            })
+            $('.pages').eq(index).css({
+                'color': 'white',
+                'background': '#ff4965'
+            })
+            $('.childrenGoodsList1').css('display', 'none');
+            $('.childrenGoodsList1')[index].style.display = 'flex';
+            has[index] = false;
+        } else {
+            $('.pages').css({
+                'color': '#77778c',
+                'background': 'white'
+            })
+            $('.pages').eq(index).css({
+                'color': 'white',
+                'background': '#ff4965'
+            })
+            $('.childrenGoodsList1').css('display', 'none');
+            $('.childrenGoodsList1')[index].style.display = 'flex';
         }
-        $('.childrenGoodsList')[0].className = 'childrenGoodsList1';
-        pages[index].className = 'childrenGoodsList';
+
+
     })
 
 }
