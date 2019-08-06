@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @mixin clear {
     content: "";
     display: block;
@@ -29,6 +31,7 @@ body {
     height: auto;
     background: white;
     padding: 20px;
+    box-sizing: border-box;
 
     &::after {
         @include clear
@@ -38,21 +41,26 @@ body {
 .detailGoodsImg {
     width: 455px;
     height: 450px;
+    background: url("http://b1.hucdn.com/upload/item/1907/21/93358923440000_800x800.jpg!250x250.jpg") no-repeat;
+    background-size: 100%;
     border: 1px solid #dfdfdf;
+
 }
 
 .detailsLeft {
-    width: 500px;
+    width: 470px;
     height: auto;
-
-    &::after {
-        @include clear
-    }
+    float: left;
 
     p {
         height: 12px;
         font-size: 12px;
-        color: #999999
+
+        color: #999999;
+
+        &:hover {
+            color: red
+        }
     }
 }
 
@@ -91,9 +99,249 @@ body {
         width: 100%;
         height: 48px;
         line-height: 48px;
+        border-bottom: 1px dashed #777777;
+
+        .detailTitleLeft {
+            float: left;
+            width: 155px;
+            height: 35px;
+
+            img {
+                width: 64px;
+                height: 35px;
+                float: left;
+            }
+
+            div {
+                float: right;
+                width: 80px;
+
+                h4 {
+                    font-size: 12px;
+                    height: 12px;
+                    line-height: 12px;
+                    font-weight: 100;
+                }
+
+                p {
+                    font-size: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                }
+            }
+
+
+        }
+
+        .detailTitleRight {
+            float: right;
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+            color: #777777;
+        }
     }
 
     &::after {
         @include clear;
     }
+}
+
+.imgDecoration {
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+    border-bottom: 1px dashed #777777;
+
+    .imgDecorationLeft {
+        width: 70px;
+        height: 75px;
+        float: left;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        &::after {
+            @include clear
+        }
+    }
+
+    .imgDecorationRight {
+        width: 460px;
+        height: auto;
+        float: right;
+
+        h2 {
+            font-size: 20px;
+            color: #333333;
+            font-weight: 100;
+        }
+
+        p {
+            color: #775544;
+            font-size: 12px;
+        }
+
+        &::after {
+            @include clear
+        }
+    }
+
+    .imgDecorationFooter {
+        width: 100;
+        height: 97px;
+        line-height: 97px;
+        font-size: 12px;
+        color: #777777;
+        clear: both;
+
+        span {
+            color: white;
+
+            &:nth-child(2) {
+                background: #5c9dff;
+            }
+
+            &:nth-child(3) {
+                background: #7dca00;
+            }
+
+            &:nth-child(4) {
+                background: #ff8094;
+            }
+        }
+
+        .detailPrice {
+            font-size: 28px;
+            color: #ff4965;
+        }
+    }
+
+    &::after {
+        @include clear;
+    }
+}
+
+/*购买细则*/
+.otherDetail {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px dashed #777777;
+
+    table {
+        font-size: 12px;
+        color: #888888;
+
+        span {
+            display: inline-block;
+            background: #ff8135;
+            color: white;
+            width: 24px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 2px;
+        }
+
+        .detailOptions {
+            span {
+                background: white;
+                text-align: center;
+                line-height: 29px;
+                border: 1px solid #b8b7bd;
+                width: 66px;
+                height: 29px;
+                color: #333333;
+                position: relative;
+
+                .detailOptionsSpan {
+                    width: 100%;
+                    height: 100%;
+                    background: transparent;
+
+                    position: absolute;
+                    left: -2px;
+                    top: -2px;
+
+                    &:hover {
+                        border: 2px solid #ff0000;
+                    }
+                }
+
+            }
+        }
+
+        button {
+            width: 20px;
+            height: 25px;
+        }
+
+        .detailNum {
+            width: 20px;
+            height: 25px;
+            background: white;
+            color: #333333
+        }
+    }
+
+    &::after {
+        @include clear;
+    }
+}
+
+/*购买方式*/
+.shoppingMethod {
+    width: 290px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+
+    .alongShopping {
+        width: 140px;
+        height: 48px;
+        color: white;
+        background: #ff4965;
+        border-radius: 5px;
+        text-align: center;
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .phoneShopping {
+        @extend .alongShopping;
+        font-size: 18px;
+        background: white;
+        border: 1px solid #ff0000;
+        color: #ff0000;
+        line-height: 48px;
+        position: relative;
+
+        .phoneShoppingCode {
+            width: 140px;
+            height: 140px;
+            border: 1px solid #ff0000;
+            position: absolute;
+            left: 0;
+            top: 48px;
+            display: none;
+        }
+
+        &:hover .phoneShoppingCode {
+            display: block;
+        }
+    }
+}
+
+.detailsRightFooter {
+    width: 100%;
+    height: 108px;
+    background: url(../img/1508.png) no-repeat 35px 50px
 }
