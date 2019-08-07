@@ -239,9 +239,13 @@
 <script src="js/jquery-1.8.3.js"></script>
 <script>
     window.onload = function () {
-        $.get('shoppingCar.php', {}, test, 'text')
+        let username = getUserName()
+        $.get('shoppingCar.php', {
+            'username': username
+        }, test, 'text')
 
         function test(data) {
+            console.log(data);
             data = JSON.parse(data)
             for (let i = 0; i < data.length; i++) {
                 let str = `
@@ -414,6 +418,36 @@
                 $(evt.target).parent().parent().parent().parent().remove();
                 total();
             })
+        }
+        //拿到cookie
+        getCookie()
+
+        function getCookie() {
+            var lastName = sessionStorage.getItem("username");
+            if (lastName) {
+                $(".aLogin").eq(0).html(lastName);
+                $(".aLogin").eq(0).click(function (e) {
+                    e.preventDefault();
+                })
+            } else if (document.cookie.includes('username')) {
+                let username = document.cookie.slice(9);
+                $(".aLogin").eq(0).html(username);
+                $(".aLogin").eq(0).click(function (e) {
+                    e.preventDefault();
+                })
+            }
+        }
+    }
+
+    function getUserName() {
+        var lastName = sessionStorage.getItem("username");
+        if (lastName) {
+            return lastName;
+        } else if (document.cookie.includes('username')) {
+            let username = document.cookie.slice(9);
+            return username;
+        } else {
+            alert('请先登录，在重新操作')
         }
     }
 </script>

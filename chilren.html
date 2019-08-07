@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/children.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/children.css">
 </head>
 
 <body>
@@ -635,64 +635,84 @@
 				<a href="#">精彩预告</a>
 			</div>
 		</div>
-    </div>
-    <!-- 童装分类 -->
-    <div class="box">
-        <div class="contentBox">
-            <div class="childrenClass">
-                <p>首页&gt分页浏览&gt童装</p>
-            </div>
-        </div>
-    </div>
-    <div class="box">
-        <div class="contentBox childrenOrderBy">
-            <div class="childrenOrderByLeft">
-                <span>综合</span>
-                <span>价格</span>
-                <span>销量</span>
-            </div>
-            <div class="childrenOrderByRight">
-                <p>位置：童装&nbsp;共 <span>960</span>件商品</p>
-            </div>
-        </div>
-    </div>
-    <div class="box">
-        <div class="contentBox childrenGoodsListBox">
-            <div class="childrenGoodsList1"></div>
-        </div>
-    </div>
-    <div class="childrenPage">
-    </div>
-    <!-- //网页底部 -->
-    <div class="box bottomNav">
-            <div class="contentBox ">
-                <ul class="bottomNavList">
-                    <li>首页</li>
-                    <li>关于贝贝</li>
-                    <li>商家入驻</li>
-                    <li>正品保证</li>
-                    <li>人才招聘</li>
-                    <li>联系我们</li>
-                    <li>帮助中心</li>
-                    <li>友情链接</li>
-                    <li>手机客户端</li>
-                    <li>客服在线</li>
-                    <li>贝贝公益</li>
-                    <li>品质健康</li>
-                    <li style="border-right:none ">育儿社区</li>
-                </ul>
-            </div>
-        </div>
-    
-        <!-- 网页底部 -->
-        <div class="box">
-            <div class="contentBox footer">
-                <p>浙ICP备14025287号 | 食品流通许可证：SP3301041510054925 | 出版物经营许可证：新出发零字第00086号 | 知识产权 | 浙公网安备 33010402000616号</p>
-                <h4>© 2014-2019 杭州贝购科技有限公司 All Rights Reserved. 客服热线：0571-10107788</h4>
-            </div>
-        </div>
+	</div>
+	<!-- 童装分类 -->
+	<div class="box">
+		<div class="contentBox">
+			<div class="childrenClass">
+				<p>首页&gt分页浏览&gt童装</p>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="contentBox childrenOrderBy">
+			<div class="childrenOrderByLeft">
+				<span>综合</span>
+				<span>价格</span>
+				<span>销量</span>
+			</div>
+			<div class="childrenOrderByRight">
+				<p>位置：童装&nbsp;共 <span>960</span>件商品</p>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="contentBox childrenGoodsListBox">
+			<div class="childrenGoodsList1"></div>
+		</div>
+	</div>
+	<div class="childrenPage">
+	</div>
+	<!-- //网页底部 -->
+	<div class="box bottomNav">
+		<div class="contentBox ">
+			<ul class="bottomNavList">
+				<li>首页</li>
+				<li>关于贝贝</li>
+				<li>商家入驻</li>
+				<li>正品保证</li>
+				<li>人才招聘</li>
+				<li>联系我们</li>
+				<li>帮助中心</li>
+				<li>友情链接</li>
+				<li>手机客户端</li>
+				<li>客服在线</li>
+				<li>贝贝公益</li>
+				<li>品质健康</li>
+				<li style="border-right:none ">育儿社区</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 网页底部 -->
+	<div class="box">
+		<div class="contentBox footer">
+			<p>浙ICP备14025287号 | 食品流通许可证：SP3301041510054925 | 出版物经营许可证：新出发零字第00086号 | 知识产权 | 浙公网安备 33010402000616号</p>
+			<h4>© 2014-2019 杭州贝购科技有限公司 All Rights Reserved. 客服热线：0571-10107788</h4>
+		</div>
+	</div>
 </body>
 
 </html>
 <script src="js/jquery-1.8.3.js"></script>
 <script src="js/children.js"></script>
+<script>
+	//拿到cookie
+	getCookie()
+
+	function getCookie() {
+		var lastName = sessionStorage.getItem("username");
+		if (lastName) {
+			$(".aLogin").eq(0).html(lastName);
+			$(".aLogin").eq(0).click(function (e) {
+				e.preventDefault();
+			})
+		} else if (document.cookie.includes('username')) {
+			let username = document.cookie.slice(9);
+			$(".aLogin").eq(0).html(username);
+			$(".aLogin").eq(0).click(function (e) {
+				e.preventDefault();
+			})
+		}
+	}
+</script>

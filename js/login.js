@@ -16,5 +16,3 @@ function checkPass(str) {
     let a = ragPass.test(str)
     return a;
 }
-
-function hello()

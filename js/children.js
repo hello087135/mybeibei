@@ -6,7 +6,7 @@ function appendData(data) {
     data = JSON.parse(data)
     console.log(data)
     for (let i = 0; i < 4; i++) {
-        $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" >
+        $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" index="${data[i].id}">
             <p> </p> <h4 class = "price"> <b> <span class = "yuan"> ￥${parseInt(parseInt(data[i].price)*(data[i].discont/10))} </span>.90</b><del> ￥${data[i].price} </del><span
     class = "discount"> ${data[i].discont} 折 </span> </h4></div>  `
         $('.childrenGoodsList1').eq(0).append($str)
@@ -17,6 +17,11 @@ function appendData(data) {
     let box1 = document.getElementsByClassName('childrenGoodsListBox')[0];
     let page = new Page(pageNum, box, box1)
     bindPage(page.divDoms, page.pageDoms, data)
+    //点击商品跳转到详情页面
+    $('body').on('click', '.goods', function (event) {
+        location.href = `goodsDetail.html?id=${$(event.target).attr('index')}`
+    })
+
 }
 class Page {
     constructor(number, box, box1) {
@@ -62,7 +67,7 @@ function bindPage(doms, pages, data) {
                 if (!data[i]) {
                     break;
                 }
-                $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" >
+                $str = ` <div class="cell cells"><img src = "${data[i].img}" class = "goods" index="${data[i].id}">
                 <p> </p> <h4 class = "price"> <b> <span class = "yuan"> ￥${parseInt(parseInt(data[i].price)*(data[i].discont/10))} </span>.90</b><del> ￥${data[i].price} </del><span
         class = "discount"> ${data[i].discont} 折 </span> </h4></div>  `
                 if (index >= 1) {

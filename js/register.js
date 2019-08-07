@@ -19,7 +19,13 @@ function checkAfterSuccess(data) {
 function result(data) {
     if (data >= 1) {
         alert("success")
+        if ($('input[type=checkbox]')[0].checked) {
+            document.cookie = `username=${username.value}`
+        } else {
+            sessionStorage.setItem("username", username.value)
+        }
+        location.href = 'index.html';
     } else {
-        alert("hi")
+        alert("注册失败")
     }
 }

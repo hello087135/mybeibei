@@ -12,4 +12,5 @@ echo 1;
 else{
     echo 0;
 }
+mysql_close($con);
 ?>

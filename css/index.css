@@ -79,10 +79,16 @@ body {
 .login li {
   margin-left: 12px;
   float: left;
+  display: flex;
 }
 
+
 .login li:nth-of-type(2) a {
+  width: 36px;
+  height: 30px;
   color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .login li:nth-of-type(2) a:hover {

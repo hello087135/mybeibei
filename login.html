@@ -24,8 +24,8 @@
                     <div class="informationContent">
                         <p>
                             <b>登录贝贝</b>
-                            <span class="informationSpan1">还没有账号?<span class="informationSpan2">
-                                    立即注册</span></span>
+                            <span class="informationSpan1">还没有账号?<a href="register.html" class="informationSpan2">
+                                    立即注册</a></span>
                         </p>
                         <input type="text" placeholder="您的手机号/邮箱" class="informationInput1"><span class="error"></span>
                         <input type="text" placeholder="您的密码" class="pass"><span class="error"></span>
@@ -112,12 +112,22 @@
     })
 
     function result1(data) {
-        let userPass = $(".pass").eq(0).val()
-        let a = JSON.parse(data)
-        if (userPass == a[0].userpass) {
-            alert("登录成功")
+        if (data) {
+            let userPass = $(".pass").eq(0).val()
+            let a = JSON.parse(data)
+            if (userPass == a[0].userpass) {
+                alert("登录成功")
+                if ($('input[type=checkbox]')[0].checked) {
+                    document.cookie = `username=${username.value}`
+                } else {
+                    sessionStorage.setItem("username", username.value)
+                }
+                location.href = 'index.html';
+            } else {
+                alert("亲你的密码不正确哦")
+            }
         } else {
-            alert("亲你的密码不正确哦")
+            alert("用户名不存在")
         }
     }
 </script>
