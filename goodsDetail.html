@@ -24,10 +24,10 @@
             <ul class="login">
                 <li>您好，</li>
                 <li>
-                    <a href="#" class="aLogin">请登入</a>
+                    <a href="login.html" class="aLogin">请登入</a>
                 </li>
                 <li>
-                    <a href="#">免费注册</a>
+                    <a href="register.html">免费注册</a>
                 </li>
                 <li>|</li>
                 <li>
@@ -95,7 +95,7 @@
     <div class="box boxNav">
         <div class="contentBox" style="position: relative;">
             <ul class="uNav">
-                <li><b>首页</b></li>
+                <li><b id="toIndex">首页</b></li>
                 <li><b>贝贝app</b></li>
                 <li><b>贝店</b></li>
                 <li><b>北仓</b></li>
@@ -621,7 +621,9 @@
     <div class="box" style="font-size: 12px ">
         <div class="contentBox navTwoDiv">
             <ul class="navTwo">
-                <li>童装</li>
+                <li><a href="chilren.html"
+                        style="display:inline-block;width:100%;height:100%;color:black;text-decoration: none;">童装</a>
+                </li>
                 <li>母婴</li>
                 <li>居家</li>
                 <li>美食</li>
@@ -664,15 +666,21 @@
         var lastName = sessionStorage.getItem("username");
         if (lastName) {
             $(".aLogin").eq(0).html(lastName);
-            $(".aLogin").eq(0).click(function (e) {
-                e.preventDefault();
-            })
+            // $(".aLogin").eq(0).click(function (e) {
+            //     e.preventDefault();
+            // })
         } else if (document.cookie.includes('username')) {
             let username = document.cookie.slice(9);
             $(".aLogin").eq(0).html(username);
-            $(".aLogin").eq(0).click(function (e) {
-                e.preventDefault();
-            })
+            // $(".aLogin").eq(0).click(function (e) {
+            //     e.preventDefault();
+            // })
         }
     }
+    $('#toIndex').click(function () {
+        location.href = "index.html"
+    })
+    $('.shopingCar').click(function () {
+        window.open('shopCar.html')
+    })
 </script>

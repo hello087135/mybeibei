@@ -303,6 +303,7 @@ body {
 }
 
 .uNav li {
+  font-size: 14px;
   height: 40px;
   width: 100px;
   text-align: center;
@@ -311,6 +312,8 @@ body {
 }
 
 .uNav li:nth-of-type(1) {
+  font-size: 12px;
+  font-weight: 800;
   background: #f34660;
 }
 

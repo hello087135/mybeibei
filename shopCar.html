@@ -27,10 +27,10 @@
             <ul class="login">
                 <li>您好，</li>
                 <li>
-                    <a href="#" class="aLogin">请登入</a>
+                    <a href="login.html" class="aLogin">请登入</a>
                 </li>
                 <li>
-                    <a href="#">免费注册</a>
+                    <a href="register.html">免费注册</a>
                 </li>
                 <li>|</li>
                 <li>
@@ -428,15 +428,15 @@
             var lastName = sessionStorage.getItem("username");
             if (lastName) {
                 $(".aLogin").eq(0).html(lastName);
-                $(".aLogin").eq(0).click(function (e) {
-                    e.preventDefault();
-                })
+                // $(".aLogin").eq(0).click(function (e) {
+                //     e.preventDefault();
+                // })
             } else if (document.cookie.includes('username')) {
                 let username = document.cookie.slice(9);
                 $(".aLogin").eq(0).html(username);
-                $(".aLogin").eq(0).click(function (e) {
-                    e.preventDefault();
-                })
+                // $(".aLogin").eq(0).click(function (e) {
+                //     e.preventDefault();
+                // })
             }
         }
     }
