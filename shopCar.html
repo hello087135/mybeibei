@@ -294,7 +294,7 @@
                 <tr class="carsFooter">
                     <td colspan="5"></td>
                     <td>小计</td>
-                    <td>29.90</td>
+                    <td> ${data[i].price*data[i].count}</td>
                 </tr>
             </table>
                 `
@@ -367,7 +367,7 @@
                 let $price = parseInt($(this).parent().parent().prev().html());
                 let $subTotal = subTotal($num, $price);
                 $(this).parent().parent().next().html($subTotal)
-
+                $(this).parent().parent().parent().next().children().last().html($subTotal)
                 //计算总价
                 total()
             })
@@ -380,6 +380,8 @@
                 let $price = parseInt($(this).parent().parent().prev().html());
                 let $subTotal = subTotal($num, $price);
                 $(this).parent().parent().next().html($subTotal)
+                $(this).parent().parent().parent().next().children().last().html($subTotal)
+
                 //计算总价
                 total()
             })
