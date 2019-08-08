@@ -262,26 +262,39 @@ function appendData(data) {
     $('.detailGoodsImgs li img').eq(0).trigger("click");
     $('.detailOptionsSpan').eq(0).trigger("click");
 }
-
+let username;
+let img;
+let imgd;
+let information;
+let price;
+let count;
 //添加购物车
 function addCar(data) {
     $('#addShoppingCar').click()
     $('body').on('click', '#addShoppingCar', function () {
         // 1. 根据需要拿到所有的数据
-        let username = getUserName();
-        let img = data[0].img;
-        let imgd = data[0].imgd;
-        let information = inf;
-        let price = data[0].price;
-        let count = $('.detailNum').html();
-        $.get('addCar.php', {
+        username = getUserName();
+        img = data[0].img;
+        imgd = data[0].imgd;
+        information = inf;
+        price = data[0].price;
+        count = parseInt($('.detailNum').html());
+        //修改开始
+        $.get('judgeCar.php', {
             'username': username,
-            'img': img,
-            'imgd': imgd,
-            'information': information,
-            'price': price,
-            'count': count
-        }, callbackAddCar, 'text')
+            'img': img
+        }, cbJudge, 'text')
+
+
+        //未修改时
+        // $.get('addCar.php', {
+        //     'username': username,
+        //     'img': img,
+        //     'imgd': imgd,
+        //     'information': information,
+        //     'price': price,
+        //     'count': count
+        // }, callbackAddCar, 'text')
     })
 }
 
@@ -304,4 +317,35 @@ function callbackAddCar(data) {
         alert('添加失败')
     }
 
+}
+//修改后
+function cbJudge(data) {
+    data = JSON.parse(data);
+    if (data) {
+        count += parseInt(data[0].count);
+        //修改数量：
+        $.get('updataCar.php', {
+            'username': username,
+            'img': img,
+            'count': count
+        }, cbUpdate, 'text')
+    } else {
+        $.get('addCar.php', {
+            'username': username,
+            'img': img,
+            'imgd': imgd,
+            'information': information,
+            'price': price,
+            'count': count
+        }, callbackAddCar, 'text')
+    }
+
+}
+
+function cbUpdate(data) {
+    if (data >= 1) {
+        alert('添加成功')
+    } else {
+        alert('添加失败')
+    }
 }

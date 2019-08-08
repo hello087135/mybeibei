@@ -1205,4 +1205,41 @@
 	$('.shopingCar').click(function () {
 		window.open('shopCar.html')
 	})
+	$('.more').click(function () {
+		let str = `<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1907/17/28987344810000_800x800.jpg"
+									class="goods">
+								<p>买7斤送2斤甘肃板栗</p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1906/28/09774923450000_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+							<div class="cell">
+								<img src="http://b1.hucdn.com/upload/item/1803/05/16770652612426_800x800.jpg"
+									class="goods">
+								<p></p>
+								<h4 class="price"><b><span class="yuan">￥17</span>.90</b><del>￥39.90</del><span
+										class="discount">4.5折</span>
+								</h4>
+							</div>
+						</div>
+
+					</div>`
+		$('.saleTable').append(str)
+	})
 </script>

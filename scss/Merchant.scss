@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+// /* 顶部设计 */
+.top {
+    height: 28px;
+    background: #f4f4f4;
+    border-top: 1px solid #b6b4b6;
+    border-bottom: 1px solid #e8e8e8;
+    overflow: visible;
+}
+
+.helper {
+    width: 128px;
+    height: 100%;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    display: flex;
+    text-align: center;
+    float: right;
+}
+
+.helpCenterli {
+    font-size: 12px;
+    width: 50%;
+    color: #555555;
+    height: 17px;
+}
+
+.helper .helpCenterli:first-child {
+    border-right: 1px solid #dddddd;
+
+}
+
+
+#helpCenter1 {
+    border: 1px solid black;
+    position: absolute;
+    width: 92px;
+    background: white;
+    left: -30px;
+    top: -5px;
+    display: none;
+}
+
+.helper li:first-child:hover #helpCenter1 {
+    display: block;
+}
+
+.helpCenterli:last-child:hover #concernTop {
+    display: block;
+}
+
+.helpCenterli:last-child:hover #concernBottom {
+    display: block;
+}
+
+.logo1 {
+    width: 100%;
+    height: 80px;
+    background: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.logo1 p {
+    height: 80px;
+    line-height: 80px;
+    font-size: 28px;
+    color: #ff4965;
+    margin-left: 22px;
+}
+
+.logo1 ul {
+    width: 480px;
+    height: 100%;
+    display: flex;
+    margin-left: 70px;
+    margin-right: 120px;
+}
+
+.logo1 ul li {
+    width: 20%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 14px;
+    font-weight: 600;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo1 ul li:first-child {
+    border-bottom: 3px solid #ff4965;
+    color: #ff4965;
+}
+
+.logo1 span {
+    width: 88px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid #36435c;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.logo1Box {
+    background: white;
+}
+
+.tips1 {
+    width: 100%;
+    height: 100%;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    background: #fef7e8;
+}
+
+.tips1>p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #7e7c77;
+}
+
+.tips1Box {
+    background: #fef7e8;
+}
+
+.investmentBox {
+    background: linear-gradient(to bottom, #18005F, #FE43A5);
+}
+
+.investmentBox1 {
+    width: 100%;
+    height: 400px;
+    background: url(img/1652.png);
+    background-size: cover;
+}
+
+.investmentContent {
+    height: 100%;
+    padding-top: 85px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.investmentContent>h1 {
+    text-align: center;
+    font-size: 80px;
+    height: 85px;
+    color: #ffffff;
+    margin-bottom: 64px;
+}
+
+.investmentContent>p {
+    text-align: center;
+    font-size: 24px;
+    height: 25px;
+    color: white;
+    margin-bottom: 58px;
+}
+
+.investmentContent>ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.investmentContent>ul>li {
+    width: 180px;
+    height: 48px;
+    border-radius: 3px;
+    line-height: 48px;
+    text-align: center;
+    color: #36435c;
+    background: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+// 流程
+.procedure {
+
+    width: 876px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 30px;
+
+    .enterProcedure {
+        width: 215px;
+        height: auto;
+        text-align: center;
+
+        h1 {
+            width: 100%;
+            height: 36px;
+            line-height: 36px;
+            font-size: 18px;
+            color: #36435c;
+
+        }
+
+        p {
+            width: 100%;
+            height: 25px;
+            font-size: 14px;
+            color: #8f8f8f;
+        }
+    }
+}
